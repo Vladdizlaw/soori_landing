@@ -11,21 +11,9 @@ export default defineNuxtConfig({
     //----------------------
     // prefix: 'Swiper',
     // styleLang: 'css',
-    // modules: ['navigation', 'pagination'], // all modules are imported by default
+    // modules: ['navigation', 'pagination', 'zoom'] // all modules are imported by default
   },
-  googleFonts: {
-    families: {
-      Roboto: true,
-      'DynaPuff': true,
-      Lato: [100, 300],
-      Raleway: {
-        wght: [100, 400],
-        ital: [100]
-      },
-      download: true,
-      base64: true
-    }
-  }
+ 
 
  
 })
