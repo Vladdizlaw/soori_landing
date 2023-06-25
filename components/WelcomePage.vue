@@ -19,12 +19,12 @@ const slider3 = Object.values(import.meta.glob('~/assets/photo/slider3/*', {
 <template>
   <div class="w-full h-full p-6 flex flex-col gap-8">
     <div class="w-full flex flex-col text">
-      <h1 class="text-[max(2.5vw,1.6rem)] text-white font-bold drop-shadow-xl  shadow-custom"> Сделано в России с любовью
+      <h1 class="text-[max(2.5vw,1.6rem)] text-red-500 font-bold drop-shadow-xl  shadow-custom"> Сделано в России с любовью
       </h1>
-      <p class="text-[max(1.5vw,1.4rem)] text-white drop-shadow-xl shadow-custom">Одежда SOORI сделает акцент на Ваших
+      <p class="text-[max(1.5vw,1.4rem)] text-red-500 drop-shadow-xl shadow-custom">Одежда SOORI сделает акцент на Ваших
         внешних
-        достоинствах и покажет Вашу индивидуальность. Выбирайте “SOORI” и будьте уверены в своей красоте! Качество по
-        доступной цене</p>
+        достоинствах и покажет Вашу индивидуальность. Выбирайте SOORI и будьте уверены в своей красоте! Качество по
+        доступной цене.</p>
     </div>
 
     <div class="flex scale-90 flex-row flex-wrap w-full h-fit  min-h-[22rem] p-4 gap-4 relative justify-center md:mt-0 mt-[-3rem]" >
@@ -33,12 +33,16 @@ const slider3 = Object.values(import.meta.glob('~/assets/photo/slider3/*', {
         <Swiper class="scale-90 h-full hover:shadow-xl duration-300 rounded-md  "
           :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperVirtual]" :slides-per-view="1" :virtual="true"
           :loop="true" :effect="'creative'" :autoplay="{
-            delay: 1000,
+            delay: 1500,
             disableOnInteraction: true,
-          }" :creative-effect="{
+            waitForTransition:false,
+            stopOnLastSlide: false,
+
+          }" 
+          :creative-effect="{
   prev: {
-    shadow: false,
-    translate: ['-20%', 0, -1],
+    shadow:true,
+    translate: ['-15%', 0, -1],
   },
   next: {
     translate: ['100%', 0, 0],
@@ -46,21 +50,25 @@ const slider3 = Object.values(import.meta.glob('~/assets/photo/slider3/*', {
 }">
           <SwiperSlide v-for="value, index in slider1" :key="index">
             <div class="rounded-xl overflow-hidden max-h-full">
-              <img :src="value" alt="photo" loading="lazy" />
+              <img :src="value" alt="photo" />
             </div>
           </SwiperSlide>
         </Swiper>
       </div>
       <div class="md:w-[19%] w-full h-full flex flex-row justify-start items-center rounded-xl select-none">
-        <Swiper class=" h-full hover:shadow-xl duration-300 rounded-md  "
-          :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperVirtual]" :slides-per-view="1" :loop="true"
-          :effect="'creative'" :virtual="true" :autoplay="{
-            delay: 1000,
+        <Swiper class="h-full hover:shadow-xl duration-300 rounded-md  "
+          :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperVirtual]" :slides-per-view="1" :virtual="true"
+          :loop="true" :effect="'creative'" :autoplay="{
+            delay: 1500,
             disableOnInteraction: true,
-          }" :creative-effect="{
+            waitForTransition:false,
+            stopOnLastSlide: false,
+
+          }" 
+          :creative-effect="{
   prev: {
-    shadow: false,
-    translate: ['-20%', 0, -1],
+    shadow:true,
+    translate: ['-15%', 0, -1],
   },
   next: {
     translate: ['100%', 0, 0],
@@ -68,22 +76,25 @@ const slider3 = Object.values(import.meta.glob('~/assets/photo/slider3/*', {
 }">
           <SwiperSlide v-for="value, index in slider2" :key="index">
             <div class="rounded-xl overflow-hidden max-h-full">
-              <img :src="value" alt="photo" loading="lazy" />
-              <div class="swiper-lazy-preloader"></div>
+              <img :src="value" alt="photo" />
             </div>
           </SwiperSlide>
         </Swiper>
       </div>
       <div class="w-[19%] h-full hidden  md:flex flex-row justify-start items-center rounded-xl select-none">
         <Swiper class="scale-90 h-full hover:shadow-xl duration-300 rounded-md  "
-          :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperVirtual]" :slides-per-view="1" :loop="true"
-          :virtual="true" :effect="'creative'" :autoplay="{
-            delay: 1000,
+          :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperVirtual]" :slides-per-view="1" :virtual="true"
+          :loop="true" :effect="'creative'" :autoplay="{
+            delay: 1500,
             disableOnInteraction: true,
-          }" :creative-effect="{
+            waitForTransition:false,
+            stopOnLastSlide: false,
+
+          }" 
+          :creative-effect="{
   prev: {
-    shadow: false,
-    translate: ['-20%', 0, -1],
+    shadow:true,
+    translate: ['-15%', 0, -1],
   },
   next: {
     translate: ['100%', 0, 0],
@@ -91,7 +102,7 @@ const slider3 = Object.values(import.meta.glob('~/assets/photo/slider3/*', {
 }">
           <SwiperSlide v-for="value, index in slider3" :key="index">
             <div class="rounded-xl overflow-hidden max-h-full">
-              <img :src="value" alt="photo" loading="lazy" />
+              <img :src="value" alt="photo" link="preload" loading="lazy"/>
             </div>
           </SwiperSlide>
         </Swiper>
@@ -113,7 +124,7 @@ const slider3 = Object.values(import.meta.glob('~/assets/photo/slider3/*', {
 </template>
 <style scoped >
 .shadow-custom {
-  text-shadow: 1px 0 1px #f76565,
+  text-shadow: 1px 0 1px #fff4f4,
     0 1px 1px #720303,
     -1px 0 1px #f02525,
     0 -1px 1px #c75757;
