@@ -13,7 +13,7 @@ const slider3 = Object.values(import.meta.glob('~/assets/photo/slider3/*', {
   import: 'default',
 }))
 
-
+const sliderM=[...slider2, ...slider1, ...slider3]
 
 </script>
 <template>
@@ -55,7 +55,7 @@ const slider3 = Object.values(import.meta.glob('~/assets/photo/slider3/*', {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div class="md:w-[19%] w-full h-full flex flex-row justify-start items-center rounded-xl select-none">
+      <div class="md:w-[19%] w-full h-full hidden md:flex  flex-row justify-start items-center rounded-xl select-none">
         <Swiper class="h-full hover:shadow-xl duration-300 rounded-md  "
           :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperVirtual]" :slides-per-view="1" :virtual="true"
           :loop="true" :effect="'creative'" :autoplay="{
@@ -80,8 +80,35 @@ const slider3 = Object.values(import.meta.glob('~/assets/photo/slider3/*', {
             </div>
           </SwiperSlide>
         </Swiper>
+      
+      </div>  
+      <div class="md:w-[19%] w-full h-full md:hidden sm:flex  flex-row justify-start items-center rounded-xl select-none">
+        <Swiper class="h-full hover:shadow-xl duration-300 rounded-md  "
+          :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperVirtual]" :slides-per-view="1" :virtual="true"
+          :loop="true" :effect="'creative'" :autoplay="{
+            delay: 1500,
+            disableOnInteraction: true,
+            waitForTransition:false,
+            stopOnLastSlide: false,
+
+          }" 
+          :creative-effect="{
+  prev: {
+    shadow:true,
+    translate: ['-15%', 0, -1],
+  },
+  next: {
+    translate: ['100%', 0, 0],
+  },
+}">
+          <SwiperSlide v-for="value, index in sliderM" :key="index">
+            <div class="rounded-xl overflow-hidden max-h-full">
+              <img :src="value" alt="photo" />
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
-      <div class="w-[19%] h-full hidden  md:flex flex-row justify-start items-center rounded-xl select-none">
+      <div class="w-[19%] h-full hidden md:flex flex-row justify-start items-center rounded-xl select-none">
         <Swiper class="scale-90 h-full hover:shadow-xl duration-300 rounded-md  "
           :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperVirtual]" :slides-per-view="1" :virtual="true"
           :loop="true" :effect="'creative'" :autoplay="{
