@@ -2,10 +2,12 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
+    '@nuxt/image',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts',
     'nuxt-swiper'
   ],
+  image:{},
   swiper: {
     // Swiper options
     //----------------------
