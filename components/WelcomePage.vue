@@ -21,13 +21,13 @@ const slider3 = import.meta.glob('~/assets/photo/slider3/*', {
       <h1 class="text-[max(3.2vw,1.6rem)] text-white font-bold drop-shadow-xl"> Сделано в России с любовью</h1>
       <p class="text-[max(2vw,1.4rem)] text-white drop-shadow-xl">Одежда SOORI сделает акцент на Ваших внешних достоинствах и покажет Вашу индивидуальность. Выбирайте “SOORI” и будьте уверены в своей красоте! Качество по доступной цене</p>
     </div>
-      <!-- {{ width }} -->
+   
       <div class="flex flex-row flex-wrap w-full h-full min-h-[20rem] p-4 gap-4 relative justify-center">
 
         <div class="md:w-[19%] w-full h-full  hidden  md:flex flex-row justify-start items-center rounded-xl select-none">
           <Swiper  class="scale-90 h-full hover:shadow-xl duration-300 rounded-md  "
             :modules="[SwiperAutoplay, SwiperEffectCreative]" :slides-per-view="1" :loop="true"
-            :navigation="false" :pagination="true" :paralax="true" :effect="'creative'" :autoplay="{
+             :effect="'creative'" :autoplay="{
               delay: 1000,
               disableOnInteraction: true,
             }" :creative-effect="{
@@ -41,15 +41,15 @@ const slider3 = import.meta.glob('~/assets/photo/slider3/*', {
 }">
             <SwiperSlide v-for="value,key,index in slider1" :key="index">
               <div class="rounded-xl overflow-hidden max-h-full">
-                <img class="" loading="lazy" :src="value" alt="photo" />
+                <img class="" loading="lazy" :src="value" alt="photo" rel="preload"/>
               </div>
             </SwiperSlide>
           </Swiper>
         </div>
         <div class="md:w-[19%] w-full h-full flex flex-row justify-start items-center rounded-xl select-none">
           <Swiper  class=" h-full hover:shadow-xl duration-300 rounded-md  "
-            :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperParallax]" :slides-per-view="1" :loop="true"
-            :navigation="false" :pagination="true" :paralax="true" :effect="'creative'" :autoplay="{
+            :modules="[SwiperAutoplay, SwiperEffectCreative]" :slides-per-view="1" :loop="true"
+             :effect="'creative'" :autoplay="{
               delay: 1000,
               disableOnInteraction: true,
             }" :creative-effect="{
@@ -63,15 +63,15 @@ const slider3 = import.meta.glob('~/assets/photo/slider3/*', {
 }">
             <SwiperSlide v-for="value,key,index in slider2" :key="index">
               <div class="rounded-xl overflow-hidden max-h-full">
-                <img class="" loading="lazy" :src="value" alt="photo" />
+                <img class="" loading="lazy" :src="value" alt="photo" rel="preload"/>
               </div>
             </SwiperSlide>
           </Swiper>
         </div>
         <div class="w-[19%] h-full hidden  md:flex flex-row justify-start items-center rounded-xl select-none">
           <Swiper  class="scale-90 h-full hover:shadow-xl duration-300 rounded-md  "
-            :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperParallax]" :slides-per-view="1" :loop="true"
-            :navigation="false" :pagination="false" :paralax="true" :effect="'creative'" :autoplay="{
+            :modules="[SwiperAutoplay, SwiperEffectCreative]" :slides-per-view="1" :loop="true"
+            :effect="'creative'" :autoplay="{
               delay: 1000,
               disableOnInteraction: true,
             }" :creative-effect="{
@@ -85,7 +85,7 @@ const slider3 = import.meta.glob('~/assets/photo/slider3/*', {
 }">
        <SwiperSlide v-for="value,key,index in slider3" :key="index">
               <div class="rounded-xl overflow-hidden max-h-full">
-                <img class="" loading="lazy" :src="value" alt="photo" />
+                <img class="" loading="lazy" :src="value" alt="photo" rel="preload"/>
               </div>
             </SwiperSlide>
           </Swiper>
