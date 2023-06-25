@@ -1,7 +1,7 @@
 <template >
     <div class="w-full h-full flex flex-col justify-start items-center text font-bold">
         <div class="min-h-fit w-full bg-white p-8 text shadow-md">
-            <p class="font-bold text-[max(2vw,1.5rem)] text-[#AD2352] drop-shadow-xl">Собственное швейное производство на
+            <p class="font-bold text-[max(2vw,1.5rem)] text-[#AD2352] shadow-custom">Собственное швейное производство на
                 самом современном оборудовании, только натуральные ткани из Турции, Киргизии, собственные разработки и
                 дизайн моделей, качество производства и клиентоориентированность</p>
         </div>
@@ -20,8 +20,10 @@
                             class="w-[10rem] rounded-md" src="~assets/wildberries.svg" alt="wildberries" /></a>
                 </div>
             </div>
-
-            <div class="flex w-full text-[max(2vw,1.2rem)] gap-2 md:items-center items-start">
+            <div class="flex w-full text-[max(2vw,1.2rem)] gap-2 md:items-center items-start ">
+                <p>Также нашу продукцию можно купить в магазине по адресу :</p>
+            </div>
+            <div class="flex w-full text-[max(2vw,1.2rem)] gap-2 md:items-center items-start md:pl-2">
                 <svg class="md:flex hidden" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960"
                     width="48">
                     <path
@@ -29,7 +31,7 @@
                 </svg>
                 <p>Краснодар, торговый центр "Галактика" 3 портал - павильон "ItalModa"</p>
             </div>
-            <div class="flex w-full text-[max(2vw,1.2rem)] gap-2 md:items-center items-start">
+            <div class="flex w-full text-[max(2vw,1.2rem)] gap-2 md:items-center items-start md:pl-2">
                 <svg class="md:flex hidden" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960"
                     width="48">
                     <path
@@ -37,7 +39,7 @@
                 </svg>
                 <p>+7 989 851 15 36</p>
             </div>
-            <div class="flex w-full text-[max(2vw,1.2rem)] gap-2 md:items-center items-start">
+            <div class="flex w-full text-[max(2vw,1.2rem)] gap-2 md:items-center items-start md:pl-2">
                 <svg class="md:flex hidden" xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960"
                     width="48">
                     <path
@@ -61,4 +63,11 @@
     font-family: "AmaticSC-Bold";
     font-weight: 600;
     color: #000000;
+}
+
+.shadow-custom {
+    text-shadow: 1px 0 1px #f09898,
+        0 1px 1px #eee6e6,
+        -1px 0 1px #e78d8d,
+        0 -1px 1px #f5c9c9;
 }</style>

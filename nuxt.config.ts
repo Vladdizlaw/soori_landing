@@ -12,10 +12,6 @@ export default defineNuxtConfig({
     format: ['jpeg']
   },
   swiper: {
-    // Swiper options
-    //----------------------
-    // prefix: 'Swiper',
-    // styleLang: 'css',
     modules: ['navigation', 'pagination', 'virtual','effect-creative','autoplay'] // all modules are imported by default
   },
  
