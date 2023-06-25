@@ -1,16 +1,17 @@
 <script setup lang="ts">
-const slider1 = import.meta.glob('~/assets/photo/slider1/*', {
+const slider1 = Object.values(import.meta.glob('~/assets/photo/slider1/*', {
   eager: true,
   import: 'default',
-})
-const slider2 = import.meta.glob('~/assets/photo/slider2/*', {
+}))
+
+const slider2 = Object.values(import.meta.glob('~/assets/photo/slider2/*', {
   eager: true,
   import: 'default',
-})
-const slider3 = import.meta.glob('~/assets/photo/slider3/*', {
+}))
+const slider3 = Object.values(import.meta.glob('~/assets/photo/slider3/*', {
   eager: true,
   import: 'default',
-})
+}))
 
 
 
@@ -39,7 +40,7 @@ const slider3 = import.meta.glob('~/assets/photo/slider3/*', {
     translate: ['100%', 0, 0],
   },
 }">
-            <SwiperSlide v-for="value,key,index in slider1" :key="index">
+            <SwiperSlide v-for="value,index in slider1" :key="index">
               <div class="rounded-xl overflow-hidden max-h-full">
                 <img class="" loading="lazy" :src="value" alt="photo" rel="preload"/>
               </div>
@@ -61,9 +62,9 @@ const slider3 = import.meta.glob('~/assets/photo/slider3/*', {
     translate: ['100%', 0, 0],
   },
 }">
-            <SwiperSlide v-for="value,key,index in slider2" :key="index">
+            <SwiperSlide v-for="value,index in slider2" :key="index">
               <div class="rounded-xl overflow-hidden max-h-full">
-                <img class="" loading="lazy" :src="value" alt="photo" rel="preload"/>
+                <img class="" loading="lazy" :src="value" alt="photo" />
               </div>
             </SwiperSlide>
           </Swiper>
@@ -83,7 +84,7 @@ const slider3 = import.meta.glob('~/assets/photo/slider3/*', {
     translate: ['100%', 0, 0],
   },
 }">
-       <SwiperSlide v-for="value,key,index in slider3" :key="index">
+       <SwiperSlide v-for="value,index in slider3" :key="index">
               <div class="rounded-xl overflow-hidden max-h-full">
                 <img class="" loading="lazy" :src="value" alt="photo" rel="preload"/>
               </div>
@@ -106,10 +107,5 @@ const slider3 = import.meta.glob('~/assets/photo/slider3/*', {
   color: #000000;
 }
 
-.swiper-wrapper {
-  border-radius: 10px;
-}
-.swiper-button-next{
-  background-color: aqua;
-}
+
 </style>

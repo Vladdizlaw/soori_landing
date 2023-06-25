@@ -7,7 +7,10 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     'nuxt-swiper'
   ],
-  image:{},
+  image: {
+    quality: 80,
+    format: ['jpeg']
+  },
   swiper: {
     // Swiper options
     //----------------------
