@@ -61,57 +61,56 @@ const dress_15 = Object.values(import.meta.glob('~/assets/photo/dress-15/*', {
   eager: true,
   import: 'default',
 }))
-const dress_16 = Object.values(import.meta.glob('~/assets/photo/dress-6/*', {
+const dress_16 = Object.values(import.meta.glob('~/assets/photo/dress-16/*', {
   eager: true,
   import: 'default',
 }))
-const dress_17 = Object.values(import.meta.glob('~/assets/photo/dress-7/*', {
+const dress_17 = Object.values(import.meta.glob('~/assets/photo/dress-17/*', {
   eager: true,
   import: 'default',
 }))
-const dress_18 = Object.values(import.meta.glob('~/assets/photo/dress-8/*', {
+const dress_18 = Object.values(import.meta.glob('~/assets/photo/dress-18/*', {
   eager: true,
   import: 'default',
 }))
-const dress_19 = Object.values(import.meta.glob('~/assets/photo/dress-9/*', {
+const dress_19 = Object.values(import.meta.glob('~/assets/photo/dress-19/*', {
   eager: true,
   import: 'default',
 }))
-const dress_20 = Object.values(import.meta.glob('~/assets/photo/dress-10/*', {
+const dress_20 = Object.values(import.meta.glob('~/assets/photo/dress-20/*', {
   eager: true,
   import: 'default',
 }))
-const dress_21 = Object.values(import.meta.glob('~/assets/photo/dress-11/*', {
+const dress_21 = Object.values(import.meta.glob('~/assets/photo/dress-21/*', {
   eager: true,
   import: 'default',
 }))
-const dress_22 = Object.values(import.meta.glob('~/assets/photo/dress-12/*', {
+const dress_22 = Object.values(import.meta.glob('~/assets/photo/dress-22/*', {
   eager: true,
   import: 'default',
 }))
-const dress_23 = Object.values(import.meta.glob('~/assets/photo/dress-13/*', {
+const dress_23 = Object.values(import.meta.glob('~/assets/photo/dress-23/*', {
   eager: true,
   import: 'default',
 }))
-const dress_24 = Object.values(import.meta.glob('~/assets/photo/dress-14/*', {
+const dress_24 = Object.values(import.meta.glob('~/assets/photo/dress-24/*', {
   eager: true,
   import: 'default',
 }))
-const dress_25 = Object.values(import.meta.glob('~/assets/photo/dress-15/*', {
+const dress_25 = Object.values(import.meta.glob('~/assets/photo/dress-25/*', {
   eager: true,
   import: 'default',
 }))
 
 
-const slider_1 = [...dress_1, ...dress_3, ...dress_20, ...dress_6, ...dress_5, ...dress_2, ...dress_16, ...dress_15, ...dress_23]
-const slider_2 = [...dress_5, ...dress_8, ...dress_7, ...dress_4, ...dress_9, ...dress_17, ...dress_24, ...dress_19, ...dress_22]
-const slider_3 = [...dress_14, ...dress_11, ...dress_18, ...dress_10, ...dress_13,...dress_14, ...dress_12, ...dress_21,, ...dress_25]
+const slider_1 = [...dress_1, ...dress_3, ...dress_2, ...dress_16, ...dress_15, ...dress_23,...dress_20,...dress_6,]
+const slider_2 = [...dress_5, ...dress_25, ...dress_7, ...dress_4, ...dress_9, ...dress_17, ...dress_24, ...dress_19, ...dress_22]
+const slider_3 = [...dress_14, ...dress_11, ...dress_18, ...dress_10, ...dress_13,...dress_14, ...dress_12, ...dress_21, ...dress_8]
 
 const slider_mob = [...slider_2, ...slider_3, ...slider_1]
-const orientation = ref()
-const onOrientationChange =(ev:Event)=>{
+const orientation = ref('landscape-primary')
+const onOrientationChange =()=>{
 orientation.value = window.screen.orientation.type 
-console.log(orientation.value)
 }
 
 onMounted(()=>{
@@ -211,12 +210,12 @@ window.removeEventListener('orientationchange', onOrientationChange)
 
     </div>
 
-    <div class="w-full flex items-center justify-center pb-4 md:mt-[-2rem] mt-[-3rem]">
-      <p class="text-[max(1.6vw,1.2rem)]">Купить нашу продукцию можно здесь <a target="_blank"
+    <div class="w-full flex items-center justify-center pb-4 md:mt-[-2rem] mt-[-3rem] ">
+      <p class="text-[max(1.6vw,1.2rem)] flex gap-4 items-center ">Купить нашу продукцию можно здесь <a target="_blank"
           href="https://www.ozon.ru/brand/soori-100866453/"
-          class="text-blue-500 underline drop-shadow-xl cursor-pointer">OZONE</a> <a target="_blank"
+          class=" hover:animate-none  text-blue-500 underline drop-shadow-xl cursor-pointer link">OZONE</a> <a target="_blank"
           href="https://www.wildberries.ru/catalog/0/search.aspx?search=soori"
-          class="cursor-pointer text-blue-500 underline drop-shadow-xl">WILDBERRIES</a></p>
+          class="animate-pulse hover:animate-none font-[600] cursor-pointer text-blue-500 underline drop-shadow-xl link">WILDBERRIES</a></p>
     </div>
 
 
@@ -224,26 +223,39 @@ window.removeEventListener('orientationchange', onOrientationChange)
 </template>
 <style scoped >
 .shadow-custom {
-  /* text-shadow: 1px 0 1px #fffffff5,
-    0 1px 1px #0be929,
-    -1px 0 1px #05e034,
-    0 -1px 1px #0bbb37; */
-    color: hsl(9, 92%, 48%);
-text-shadow: 0 0 1px hsl(20, 100%, 18%),
-             -1px 1px 0 hsl(20, 100%, 16%),                             
-             -2px 2px 2px -1px hsl(20, 100%, 14%),                             
-             -4px 4px 2px -2px hsl(20, 100%, 12%),
-             -6px 6px 3px -3px hsl(20, 100%, 10%),
-             -8px 8px 2px -4px hsl(20, 100%, 9%),
-             -10px 10px 3px -5px hsl(20, 100%, 8%),
-             -12px 12px 2px -6px hsl(20, 100%, 7%),
-             -14px 14px 2px -7px hsl(20, 100%, 6%), 
-             -15px 15px 2px -8px hsl(20, 100%, 5%),                             
-             -15px 15px 0 -8px hsla(20, 50%, 10%, 0.25);
+             color: hsl(0, 80%, 54%);
+text-shadow: 0 2px 0 0px hsl(330, 100%, 25%),
+             0 3px 2px 0px hsla(330, 100%, 15%, 0.5),
+             /* next */
+             0 3px 0 3px hsl(350, 100%, 50%),
+             0 5px 0 3px hsl(350, 100%, 25%),
+             0 6px 2px 3px hsla(350, 100%, 15%, 0.5),
+             /* next */
+             0 6px 0 9px hsl(20, 100%, 50%),
+             0 8px 0 9px hsl(20, 100%, 25%),
+             0 9px 2px 9px hsla(20, 100%, 15%, 0.5),
+             /* next */
+             0 9px 0 18px hsl(0, 0%, 7%)
+             0 11px 0 18px hsl(50, 100%, 25%),
+             0 12px 2px 18px hsla(50, 100%, 15%, 0.5),
+             /* next */
+             0 12px 0 30px hsl(70, 100%, 50%),
+             0 14px 0 30px hsl(70, 100%, 25%),
+             0 15px 2px 30px hsla(70, 100%, 15%, 0.5),
+             /* next */
+             0 15px 0 45px hsl(7, 84%, 88%),
+             0 17px 0 45px hsl(90, 100%, 25%),
+             0 17px 2px 45px hsla(90, 100%, 15%, 0.5);
+}
+@keyframes pulsate{50%{color:#fff;text-shadow:0 -1px rgba(0,0,0,.3),0 0 5px #f03000,0 0 8px #f80000;}
 }
 
 .text {
   font-family: "AmaticSC-Bold";
   color: #000000;
+}
+.link{
+  animation: pulsate 1.3s linear infinite;
+
 }
 </style>

@@ -66,8 +66,27 @@
 }
 
 .shadow-custom {
-    text-shadow: 1px 0 1px #f09898,
-        0 1px 1px #eee6e6,
-        -1px 0 1px #e78d8d,
-        0 -1px 1px #f5c9c9;
+             color: hsl(0, 80%, 54%);
+text-shadow: 0 2px 0 0px hsl(330, 500%, 25%),
+             0 3px 2px 0px hsla(330, 100%, 15%, 0.5),
+             /* next */
+             0 3px 0 3px hsl(350, 100%, 50%),
+             0 5px 0 3px hsl(350, 100%, 25%),
+             0 6px 2px 3px hsla(350, 100%, 15%, 0.5),
+             /* next */
+             0 6px 0 9px hsl(20, 100%, 50%),
+             0 8px 0 9px hsl(20, 100%, 25%),
+             0 9px 2px 9px hsla(20, 100%, 15%, 0.5),
+             /* next */
+             0 9px 0 18px hsl(0, 0%, 7%)
+             0 11px 0 18px hsl(50, 100%, 25%),
+             0 12px 2px 18px hsla(50, 100%, 15%, 0.5),
+             /* next */
+             0 12px 0 30px hsl(70, 100%, 50%),
+             0 14px 0 30px hsl(70, 100%, 25%),
+             0 15px 2px 30px hsla(70, 100%, 15%, 0.5),
+             /* next */
+             0 15px 0 45px hsl(7, 84%, 88%),
+             0 17px 0 45px hsl(90, 100%, 25%),
+             0 17px 2px 45px hsla(90, 100%, 15%, 0.5);
 }</style>
