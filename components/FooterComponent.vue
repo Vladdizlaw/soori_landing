@@ -66,9 +66,8 @@
 }
 
 .shadow-custom {
-    color: hsl(0, 80%, 54%);
-    -webkit-text-shadow: -1px 8px 5px rgba(38,  81,  166, 1);
--moz-text-shadow: -1px 8px 5px rgba(38,  81,  166, 1);
-text-shadow: -1px 8px 5px rgba(38,  81,  166, 1);
+    -webkit-text-shadow: 2px 1px 28px rgba(188, 24, 106, 0.38);;
+-moz-text-shadow: 2px 1px 28px rgba(188, 24, 106, 0.38);
+text-shadow: 2px 1px 28px rgba(188, 24, 106, 0.38);
 }
 </style>

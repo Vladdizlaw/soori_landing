@@ -101,10 +101,14 @@ const dress_25 = Object.values(import.meta.glob('~/assets/photo/dress-25/*', {
   eager: true,
   import: 'default',
 }))
+const dress_26 = Object.values(import.meta.glob('~/assets/photo/dress-26/*', {
+  eager: true,
+  import: 'default',
+}))
 
 
-const slider_1 = [...dress_1, ...dress_3, ...dress_2, ...dress_16, ...dress_15, ...dress_23, ...dress_20, ...dress_6,]
-const slider_2 = [...dress_5, ...dress_25, ...dress_7, ...dress_4, ...dress_9, ...dress_17, ...dress_24, ...dress_19, ...dress_22]
+const slider_1 = [...dress_1, ...dress_3, ...dress_2, ...dress_16, ...dress_15, ...dress_23, ...dress_20, ...dress_6,...dress_7]
+const slider_2 = [...dress_5, ...dress_26, ...dress_25, ...dress_4, ...dress_9, ...dress_17, ...dress_24, ...dress_19, ...dress_22]
 const slider_3 = [...dress_14, ...dress_11, ...dress_18, ...dress_10, ...dress_13, ...dress_14, ...dress_12, ...dress_21, ...dress_8]
 
 const slider_mob = [...slider_2, ...slider_3, ...slider_1]
@@ -215,7 +219,7 @@ onBeforeUnmount(() => {
     </div>
 
     <div class="w-full flex items-center justify-center pb-4 md:mt-[-2rem] mt-[-3rem] ">
-      <p class="text-[max(1.6vw,1.2rem)] ">Купить нашу продукцию можно здесь <a target="_blank"
+      <p class="text-[max(1.6vw,1rem)] ">Купить нашу продукцию можно здесь <a target="_blank"
           href="https://www.ozon.ru/brand/soori-100866453/"
           class=" hover:animate-none  text-blue-500 underline drop-shadow-xl cursor-pointer link ml-4">OZONE</a> <a
           target="_blank" href="https://www.wildberries.ru/catalog/0/search.aspx?search=soori"
@@ -227,18 +231,9 @@ onBeforeUnmount(() => {
   </div>
 </template>
 <style scoped >
-.shadow-custom {
-
-  color: hsl(0, 80%, 54%);
-
-  -webkit-text-shadow: -1px 8px 14px rgba(166, 38, 102, 0.76);
-  -moz-text-shadow: -1px 8px 14px rgba(166, 38, 102, 0.76);
-  text-shadow: -1px 8px 14px rgba(166, 38, 102, 0.76);
-
-}
 
 .shadow-custom_title {
-  color: hsl(0, 86%, 58%);
+  color: #bf1f56;
   animation: pulsateTitle 1.4s linear infinite;
 
 }
@@ -246,28 +241,18 @@ onBeforeUnmount(() => {
 @keyframes pulsate {
   50% {
     color: #1915ec;
-    text-shadow: 0 -1px rgba(14, 62, 133, 0.3), 0 0 5px #1c84da, 0 0 8px #25a7ac;
+    text-shadow: 0 -1px rgba(18, 70, 240, 0.3), 0 0 2px #1c84da, 0 0 4px #25a7ac;
   }
 }
 
 @keyframes pulsateTitle {
-  0% {
-    -webkit-text-shadow: 1px 1px 1px rgba(166,  38,  102, 0.46);
--moz-text-shadow: 1px 1px 2px rgba(166,  38,  102, 0.46);
-text-shadow: 1px 1px 2px rgba(166,  38,  102, 0.46);
  
-  }
   50% {
-    -webkit-text-shadow: 4px 3px 6px rgba(166,  38,  102, 0.46);
--moz-text-shadow: 4px 3px 6px rgba(166,  38,  102, 0.46);
-text-shadow: 4px 3px 6px rgba(166,  38,  102, 0.46);
+    -webkit-text-shadow: 2px 1px 28px rgba(188, 24, 106, 0.38);;
+-moz-text-shadow: 2px 1px 28px rgba(188, 24, 106, 0.38);
+text-shadow: 2px 1px 28px rgba(188, 24, 106, 0.38);
   }
-  100% {
-    -webkit-text-shadow: 2px 1px 2px rgba(166,  38,  102, 0.46);
--moz-text-shadow: 2px 1px 3px rgba(166,  38,  102, 0.46);
-text-shadow: 2px 1px 3px rgba(166,  38,  102, 0.46);
  
-  }
 }
 
 
